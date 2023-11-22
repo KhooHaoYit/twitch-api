@@ -20,6 +20,8 @@ export class AppController {
     const clip = await this.prisma.clip.findUnique({
       where: { slug: clipSlug },
     });
+    if (!clip)
+      return JSON.stringify(null);
     const streamerChannel =
       includeStreamerChannel
         ? clip?.streamerChannelId
