@@ -32,7 +32,7 @@ export class AppService {
         name: clip.clipper.name,
       },
       create: {
-        id: clip.id,
+        id: clip.clipper.id,
         handle: clip.clipper.handle,
         name: clip.clipper.name,
       },
@@ -62,7 +62,7 @@ export class AppService {
         avatarUrl: newAvatarUrl,
       },
       create: {
-        id: clip.id,
+        id: clip.streamer.id,
         handle: clip.streamer.handle,
         name: clip.streamer.name,
         avatarUrl: newAvatarUrl,
